@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/paper_smack.ogg-11532bb52ca10a4f5e809959d6835b6a.oggstr"
+
+[deps]
+
+source_file="res://Assets/sounds/paper_smack.ogg"
+dest_files=[ "res://.import/paper_smack.ogg-11532bb52ca10a4f5e809959d6835b6a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

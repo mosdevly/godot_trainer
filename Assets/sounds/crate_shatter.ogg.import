@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/crate_shatter.ogg-822298199806017399e69bd97ebdd648.oggstr"
+
+[deps]
+
+source_file="res://Assets/sounds/crate_shatter.ogg"
+dest_files=[ "res://.import/crate_shatter.ogg-822298199806017399e69bd97ebdd648.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

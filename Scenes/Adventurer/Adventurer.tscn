@@ -1,0 +1,593 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://Assets/spritesheets/Adventurer Sprite Sheet v1.1.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Adventurer/Adventurer.gd" type="Script" id=2]
+[ext_resource path="res://Assets/sounds/whoosh.ogg" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.02733, 3.56663 )
+
+[sub_resource type="Animation" id=2]
+length = 0.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 39, 48 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.02733, 7.3367 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("SwordSwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SwordSwing:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "attack_down_left"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 143, 152 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/SwordArea/SwordShape:shape:extents")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6.01945, 8.52725 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 26, 35 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.02733, 8.52725 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("SwordSwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SwordSwing:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "attack_up_left"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 130, 139 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/SwordArea/SwordShape:shape:extents")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6.01945, 8.52725 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 91, 97 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 78, 81 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 2.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 12 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "idle_left"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 104, 116 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 65, 70 ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 52, 61 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.02733, 3.56663 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("SwordSwing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SwordSwing:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "slash_left"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 156, 165 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/SwordArea/SwordShape:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/SwordArea/SwordShape:shape:extents")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5.02733, 3.56663 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 13, 20 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "walk_left"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 117, 124 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AdventurerShape:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.68896, 6.36641 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "attack_down"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "attack_up"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "hurt"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "slash"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachine" id=38]
+states/attack_down/node = SubResource( 15 )
+states/attack_down/position = Vector2( 643, 375.5 )
+states/attack_up/node = SubResource( 16 )
+states/attack_up/position = Vector2( 444, 375.5 )
+states/die/node = SubResource( 17 )
+states/die/position = Vector2( 271, 375.5 )
+states/hurt/node = SubResource( 18 )
+states/hurt/position = Vector2( 271, 229 )
+states/idle/node = SubResource( 19 )
+states/idle/position = Vector2( 386, 101 )
+states/jump/node = SubResource( 20 )
+states/jump/position = Vector2( 798, 101 )
+states/slash/node = SubResource( 21 )
+states/slash/position = Vector2( 491, 229 )
+states/walk/node = SubResource( 22 )
+states/walk/position = Vector2( 616, 101 )
+transitions = [ "idle", "walk", SubResource( 23 ), "walk", "idle", SubResource( 24 ), "idle", "slash", SubResource( 25 ), "slash", "idle", SubResource( 26 ), "slash", "attack_up", SubResource( 27 ), "attack_up", "attack_down", SubResource( 28 ), "attack_down", "slash", SubResource( 29 ), "walk", "slash", SubResource( 30 ), "slash", "walk", SubResource( 31 ), "walk", "jump", SubResource( 32 ), "jump", "walk", SubResource( 33 ), "idle", "hurt", SubResource( 34 ), "hurt", "idle", SubResource( 35 ), "hurt", "die", SubResource( 36 ), "slash", "hurt", SubResource( 37 ) ]
+start_node = "idle"
+end_node = "die"
+graph_offset = Vector2( 0, 19.418 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=39]
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 6.84703, 3.1236 )
+
+[node name="Adventurer" type="KinematicBody2D"]
+scale = Vector2( 2, 2 )
+collision_mask = 30
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+run_speed = 150
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 13
+frame = 7
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="SwordArea" type="Area2D" parent="Sprite"]
+
+[node name="SwordShape" type="CollisionShape2D" parent="Sprite/SwordArea"]
+position = Vector2( 10.8504, 7.2063 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack_down = SubResource( 2 )
+anims/attack_down_left = SubResource( 3 )
+anims/attack_up = SubResource( 4 )
+anims/attack_up_left = SubResource( 5 )
+anims/die = SubResource( 6 )
+anims/hurt = SubResource( 7 )
+anims/idle = SubResource( 8 )
+anims/idle_left = SubResource( 9 )
+anims/jump = SubResource( 10 )
+anims/slash = SubResource( 11 )
+anims/slash_left = SubResource( 12 )
+anims/walk = SubResource( 13 )
+anims/walk_left = SubResource( 14 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 38 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 39 )
+
+[node name="AdventurerShape" type="CollisionShape2D" parent="."]
+position = Vector2( 0.101558, 12.716 )
+shape = SubResource( 40 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.8
+drag_margin_top = 0.8
+drag_margin_right = 0.8
+drag_margin_bottom = 0.8
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="SwordSwing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+[connection signal="area_entered" from="Sprite/SwordArea" to="." method="_on_SwordHitBox_area_entered"]
